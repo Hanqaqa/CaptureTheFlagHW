@@ -66,7 +66,7 @@ U 1 1 5F6F0AFD
 P 2900 3950
 F 0 "A1" H 2900 2861 50  0000 C CNN
 F 1 "Arduino_Nano_v3.x" H 3600 2950 50  0000 C CNN
-F 2 "Module:Arduino_Nano_WithMountingHoles" H 2900 3950 50  0001 C CIN
+F 2 "Module:Arduino_Nano" H 2900 3950 50  0001 C CIN
 F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 2900 3950 50  0001 C CNN
 	1    2900 3950
 	1    0    0    -1  
@@ -146,8 +146,6 @@ F 3 "" H 6050 4450 50  0001 C CNN
 	1    6050 4450
 	0    1    1    0   
 $EndComp
-Text GLabel 6050 4950 0    50   Input ~ 0
-VIN
 $Comp
 L power:GND #PWR0105
 U 1 1 5F73541B
@@ -233,91 +231,81 @@ Arduino Nano v3
 Text Notes 5050 2200 0    50   ~ 0
 Connections
 $Comp
+L Switch:SW_DIP_x01 SW1
+U 1 1 608678A7
+P 1850 3200
+F 0 "SW1" H 1850 3467 50  0000 C CNN
+F 1 "SW_DIP_x01" H 1850 3376 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1850 3200 50  0001 C CNN
+F 3 "~" H 1850 3200 50  0001 C CNN
+	1    1850 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 3550 2150 3550
+Wire Wire Line
+	2150 3550 2150 3200
+$Comp
+L power:GND #PWR0107
+U 1 1 6086BA7D
+P 1550 3200
+F 0 "#PWR0107" H 1550 2950 50  0001 C CNN
+F 1 "GND" V 1555 3072 50  0000 R CNN
+F 2 "" H 1550 3200 50  0001 C CNN
+F 3 "" H 1550 3200 50  0001 C CNN
+	1    1550 3200
+	0    1    1    0   
+$EndComp
+Wire Notes Line
+	8100 2250 8100 5500
+Wire Notes Line
+	8100 5500 10400 5500
+Wire Notes Line
+	10400 5500 10400 2250
+Wire Notes Line
+	10400 2250 8100 2250
+$Comp
+L power:GND #PWR0108
+U 1 1 608C346D
+P 8900 4750
+F 0 "#PWR0108" H 8900 4500 50  0001 C CNN
+F 1 "GND" H 8905 4577 50  0000 C CNN
+F 2 "" H 8900 4750 50  0001 C CNN
+F 3 "" H 8900 4750 50  0001 C CNN
+	1    8900 4750
+	1    0    0    -1  
+$EndComp
+$Comp
 L Mechanical:MountingHole_Pad H1
-U 1 1 5F826D42
-P 9250 3050
-F 0 "H1" V 9204 3200 50  0000 L CNN
-F 1 "MountingHole_Pad" V 9295 3200 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9250 3050 50  0001 C CNN
-F 3 "~" H 9250 3050 50  0001 C CNN
-	1    9250 3050
+U 1 1 608C72AE
+P 9600 2750
+F 0 "H1" H 9700 2799 50  0000 L CNN
+F 1 "MountingHole_Pad" H 9700 2708 50  0001 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9600 2750 50  0001 C CNN
+F 3 "~" H 9600 2750 50  0001 C CNN
+	1    9600 2750
 	0    1    1    0   
 $EndComp
 $Comp
 L Mechanical:MountingHole_Pad H2
-U 1 1 5F8280E5
-P 9250 3400
-F 0 "H2" V 9204 3550 50  0000 L CNN
-F 1 "MountingHole_Pad" V 9295 3550 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9250 3400 50  0001 C CNN
-F 3 "~" H 9250 3400 50  0001 C CNN
-	1    9250 3400
+U 1 1 608C7EC4
+P 9600 3100
+F 0 "H2" H 9700 3149 50  0000 L CNN
+F 1 "MountingHole_Pad" H 9700 3058 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9600 3100 50  0001 C CNN
+F 3 "~" H 9600 3100 50  0001 C CNN
+	1    9600 3100
 	0    1    1    0   
 $EndComp
-$Comp
-L Mechanical:MountingHole_Pad H3
-U 1 1 5F828388
-P 9250 3750
-F 0 "H3" V 9204 3900 50  0000 L CNN
-F 1 "MountingHole_Pad" V 9295 3900 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9250 3750 50  0001 C CNN
-F 3 "~" H 9250 3750 50  0001 C CNN
-	1    9250 3750
-	0    1    1    0   
-$EndComp
-$Comp
-L Mechanical:MountingHole_Pad H4
-U 1 1 5F82886C
-P 9250 4100
-F 0 "H4" V 9204 4250 50  0000 L CNN
-F 1 "MountingHole_Pad" V 9295 4250 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9250 4100 50  0001 C CNN
-F 3 "~" H 9250 4100 50  0001 C CNN
-	1    9250 4100
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR0107
-U 1 1 5F829BBE
-P 9350 4500
-F 0 "#PWR0107" H 9350 4250 50  0001 C CNN
-F 1 "GND" H 9350 4350 50  0000 C CNN
-F 2 "" H 9350 4500 50  0001 C CNN
-F 3 "" H 9350 4500 50  0001 C CNN
-	1    9350 4500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	8850 3050 9150 3050
+	9500 3100 8900 3100
 Wire Wire Line
-	9150 3400 8850 3400
+	9500 2750 8900 2750
 Wire Wire Line
-	8850 3050 8850 3400
-Connection ~ 8850 3400
+	8900 2750 8900 3100
+Connection ~ 8900 3100
+Text GLabel 6050 4950 0    50   Input ~ 0
+5V
 Wire Wire Line
-	8850 3400 8850 3750
-Wire Wire Line
-	9150 3750 8850 3750
-Connection ~ 8850 3750
-Wire Wire Line
-	8850 3750 8850 4100
-Wire Wire Line
-	9150 4100 8850 4100
-Connection ~ 8850 4100
-Wire Wire Line
-	8850 4100 8850 4400
-Wire Notes Line
-	10350 2250 10350 5500
-Wire Notes Line
-	10350 5500 8250 5500
-Wire Notes Line
-	8250 5500 8250 2250
-Wire Notes Line
-	8250 2250 10350 2250
-Text Notes 8300 2200 0    50   ~ 0
-Mounting Holes
-Wire Wire Line
-	8850 4400 9350 4400
-Wire Wire Line
-	9350 4400 9350 4500
+	8900 3100 8900 4750
 $EndSCHEMATC
