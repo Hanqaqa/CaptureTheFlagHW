@@ -268,7 +268,7 @@ U 1 1 608C72AE
 P 9600 2750
 F 0 "H1" H 9700 2799 50  0000 L CNN
 F 1 "MountingHole_Pad" H 9700 2708 50  0001 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9600 2750 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 9600 2750 50  0001 C CNN
 F 3 "~" H 9600 2750 50  0001 C CNN
 	1    9600 2750
 	0    1    1    0   
@@ -279,22 +279,13 @@ U 1 1 608C7EC4
 P 9600 3100
 F 0 "H2" H 9700 3149 50  0000 L CNN
 F 1 "MountingHole_Pad" H 9700 3058 50  0001 C CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9600 3100 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 9600 3100 50  0001 C CNN
 F 3 "~" H 9600 3100 50  0001 C CNN
 	1    9600 3100
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	9500 3100 8900 3100
-Wire Wire Line
-	9500 2750 8900 2750
-Wire Wire Line
-	8900 2750 8900 3100
-Connection ~ 8900 3100
 Text GLabel 6050 4950 0    50   Input ~ 0
 5V
-Wire Wire Line
-	8900 3100 8900 4750
 Connection ~ 3000 4950
 $Comp
 L MCU_Module:Arduino_Nano_v3.x A1

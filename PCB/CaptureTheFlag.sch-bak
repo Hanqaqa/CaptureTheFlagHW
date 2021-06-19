@@ -61,17 +61,6 @@ SPI_MISO
 Text GLabel 2400 4650 0    50   Input ~ 0
 SPI_SCK
 $Comp
-L MCU_Module:Arduino_Nano_v3.x A1
-U 1 1 5F6F0AFD
-P 2900 3950
-F 0 "A1" H 2900 2861 50  0000 C CNN
-F 1 "Arduino_Nano_v3.x" H 3600 2950 50  0000 C CNN
-F 2 "Module:Arduino_Nano" H 2900 3950 50  0001 C CIN
-F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 2900 3950 50  0001 C CNN
-	1    2900 3950
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR0102
 U 1 1 5F72C2BF
 P 6050 3400
@@ -109,7 +98,6 @@ F 3 "" H 3000 4950 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2900 4950 3000 4950
-Connection ~ 3000 4950
 Text GLabel 6050 4650 0    50   Input ~ 0
 3.3V
 $Comp
@@ -223,7 +211,6 @@ NoConn ~ 2400 4050
 NoConn ~ 2400 3950
 NoConn ~ 2400 3750
 NoConn ~ 2400 3650
-NoConn ~ 2400 3550
 NoConn ~ 2400 3450
 NoConn ~ 2400 3350
 Text Notes 1300 2200 0    50   ~ 0
@@ -281,7 +268,7 @@ U 1 1 608C72AE
 P 9600 2750
 F 0 "H1" H 9700 2799 50  0000 L CNN
 F 1 "MountingHole_Pad" H 9700 2708 50  0001 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9600 2750 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 9600 2750 50  0001 C CNN
 F 3 "~" H 9600 2750 50  0001 C CNN
 	1    9600 2750
 	0    1    1    0   
@@ -292,20 +279,32 @@ U 1 1 608C7EC4
 P 9600 3100
 F 0 "H2" H 9700 3149 50  0000 L CNN
 F 1 "MountingHole_Pad" H 9700 3058 50  0001 C CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9600 3100 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 9600 3100 50  0001 C CNN
 F 3 "~" H 9600 3100 50  0001 C CNN
 	1    9600 3100
 	0    1    1    0   
 $EndComp
+Text GLabel 6050 4950 0    50   Input ~ 0
+5V
+Connection ~ 3000 4950
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 5F6F0AFD
+P 2900 3950
+F 0 "A1" H 2900 2861 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 3600 2950 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 2900 3950 50  0001 C CIN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 2900 3950 50  0001 C CNN
+	1    2900 3950
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	9500 3100 8900 3100
+	8900 3100 8900 4750
+Connection ~ 8900 3100
+Wire Wire Line
+	8900 2750 8900 3100
 Wire Wire Line
 	9500 2750 8900 2750
 Wire Wire Line
-	8900 2750 8900 3100
-Connection ~ 8900 3100
-Text GLabel 6050 4950 0    50   Input ~ 0
-5V
-Wire Wire Line
-	8900 3100 8900 4750
+	9500 3100 8900 3100
 $EndSCHEMATC
